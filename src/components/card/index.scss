@@ -1,0 +1,74 @@
+@use "../../styles/main.scss";
+
+
+.card {
+  position: relative;
+  color: main.$white;
+  background-color: main.$dark-blue;
+  padding: 1rem;
+  border-radius: 20px;
+  min-width: 17rem;
+  z-index: 3;
+  
+  &:hover {
+    background-color: main.$soft-blue;
+  }
+}
+
+.top-card {
+  display: flex;
+  flex-direction: row-reverse;
+  position: absolute;
+  height: 100%;
+  left: 0;
+  right: 0;
+  top: -50px;
+  border-radius: 20px;
+
+  & > svg {
+    margin-right: 1rem;
+  }
+}
+
+.work { background-color: main.$orange; }
+
+.play { background-color: main.$blue; }
+
+.study { background-color: main.$soft-red; }
+
+.exercise { background-color: main.$green; }
+
+.social { background-color: main.$violet; }
+
+.self { background-color: main.$soft-orange; }
+
+.card-container {
+  position: relative;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  gap: 9rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.card-text {
+  font-size: 3rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.card-footer-text {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  color: main.$pale-blue;
+}
