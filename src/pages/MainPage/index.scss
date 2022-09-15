@@ -19,19 +19,73 @@
 }
 
 .header-container {
+  position: relative;
   grid-area: 1 / 1 / 3 / 1;
 }
 
-.main-header {
-
+.main-grid__header {
   display: flex;
-  background-color: main.$blue;
-  border-radius: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 75%;
+  left: 0;
+  right: 0;
+  top: -50px;
+  border-radius: 20px;
+  background: main.$blue;
+  z-index: 2;
+
+  & > p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: main.$white;
+    align-self: start;
+    padding-left: 4rem;
+  }
+
+  & > h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: main.$white;
+    align-self: start;
+    padding-left: 4rem;
+  }
+}
+
+.main-header {
+  display: flex;
+  background-color: main.$dark-blue;
   position: relative;
+  height: 100%;
+  z-index: 1;
+  margin-top: 4.5rem;
+  border-radius: 1rem;
 }
 
 .btn {
+  font-size: large;
+  text-align: left;
   background: none;
   border: none;
-  color: main.$white;
+  color: main.$pale-blue;
+
+  &-active {
+    color: main.$white;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: main.$white;
+  }
+}
+
+
+.time-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 3rem;
+  padding: 3rem;
 }
